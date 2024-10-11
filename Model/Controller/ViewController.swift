@@ -26,10 +26,9 @@ class ViewController: UIViewController {
     }
     
     func updateUI() {
-        let numberOfExample = storyBrain.getNumberOfStories()
-        storyLabel.text = storyBrain.stories[numberOfExample].title
-        choice1Button.setTitle(storyBrain.stories[numberOfExample].choice1, for: .normal)
-        choice2Button.setTitle(storyBrain.stories[numberOfExample].choice2, for: .normal)
+        storyLabel.text = storyBrain.getTitle()
+        choice1Button.setTitle(storyBrain.getChoice1(), for: .normal)
+        choice2Button.setTitle(storyBrain.getChoice2(), for: .normal)
     }
 }
 
